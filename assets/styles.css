@@ -77,6 +77,15 @@ h1 { font-size: clamp(3.6rem, 8vw, 7rem); margin: 0; max-width: 900px; }
 .split { display: grid; grid-template-columns: .78fr 1.22fr; gap: 80px; }
 .prose { max-width: 760px; color: var(--muted); font-size: 1.08rem; }
 .prose p:first-child { margin-top: 0; }
+.about-prose strong { color: var(--ink); }
+.education-block { margin: 38px 0 40px; }
+.education-block h3 { margin: 0 0 16px; color: var(--ink); font-size: 1.25rem; letter-spacing: -0.02em; }
+.education-list { display: grid; gap: 14px; }
+.education-card { display: grid; grid-template-columns: 112px 1fr; gap: 22px; align-items: start; padding: 22px 24px; background: rgba(255,255,255,.72); border: 1px solid var(--line); border-radius: 20px; }
+.education-date { color: var(--teal); font-weight: 820; letter-spacing: .01em; }
+.education-card h4 { margin: 0 0 4px; color: var(--ink); font-size: 1.08rem; letter-spacing: -0.02em; }
+.education-card p { margin: 0; }
+.education-card .education-detail { margin-top: 4px; font-size: .92rem; color: #77827f; }
 
 .card-grid { display: grid; gap: 18px; }
 .research-grid { grid-template-columns: repeat(4, 1fr); }
@@ -156,6 +165,7 @@ h1 { font-size: clamp(3.6rem, 8vw, 7rem); margin: 0; max-width: 900px; }
   .section { padding: 74px 0; }
   .research-grid, .project-grid { grid-template-columns: 1fr; }
   .publication, .preview-item { grid-template-columns: 1fr; gap: 8px; padding: 22px 0; }
+  .education-card { grid-template-columns: 1fr; gap: 8px; padding: 20px; }
   .contact-card { padding: 32px; }
   .footer-row { flex-direction: column; }
   .portrait-card img { aspect-ratio: 1 / 1.18; }
