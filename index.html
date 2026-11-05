@@ -56,7 +56,13 @@
         min-height: calc(100svh - 77px);
         padding: 12px 0;
       }
-      .hero-grid { align-items: start; gap: clamp(32px, 5vw, 64px); }
+      .hero-grid { align-items: stretch; gap: clamp(32px, 5vw, 64px); }
+      .hero-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .hero-visual { display: flex; flex-direction: column; }
       .hero h1 { font-size: clamp(2.6rem, 4.8vw, 4.3rem); }
       .hero .role { margin-top: 14px; }
       .hero-text { margin-top: 16px; }
@@ -66,11 +72,12 @@
         width: min(100%, 360px);
       }
       .hero-visual .portrait-card {
+        margin-bottom: 10px;
         width: min(100%, 320px, max(136px, calc(80svh - 260px)));
         margin-inline: auto;
         transform: none;
       }
-      .hero-visual .caws-notice { gap: 10px; margin-top: 10px; padding: 10px 12px; }
+      .hero-visual .caws-notice { gap: 10px; margin-top: auto; padding: 10px 12px; }
       .hero-visual .caws-notice svg { width: 48px; }
       .hero-visual .caws-notice p { font-size: 0.9rem; }
     }
