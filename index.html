@@ -45,8 +45,10 @@
     #projects .preview-item p { overflow-wrap: anywhere; }
     @media (min-width: 981px) {
       .hero {
-        min-height: calc(100svh - 76px);
-        padding: 14px 0 20px;
+        display: grid;
+        align-content: center;
+        min-height: calc(100svh - 77px);
+        padding: 12px 0;
       }
       .hero-grid { align-items: start; gap: clamp(32px, 5vw, 64px); }
       .hero-copy { padding-top: 4px; }
