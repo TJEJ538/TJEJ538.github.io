@@ -41,7 +41,13 @@
     .hero-visual .caws-notice { margin-top: 18px; }
     #projects .project-list { list-style: none; padding: 0; }
     #projects .preview-item { grid-template-columns: 86px minmax(0, 1fr); }
-    #projects .preview-item h3 { line-height: 1.4; }
+    #projects .project-group { margin-top: 32px; }
+    #projects .project-group h3 { margin: 0; color: var(--teal-dark); font-size: 1.35rem; }
+    #projects .preview-item h4 {
+      margin: 0 0 6px;
+      font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+      line-height: 1.4;
+    }
     #projects .preview-item p { overflow-wrap: anywhere; }
     @media (min-width: 981px) {
       .hero {
@@ -235,88 +241,101 @@
             <h2>研究與教學計畫</h2>
             <p>依計畫類型排列，同類計畫依起始日期由新到舊</p>
           </div>
-          <ul class="pub-preview project-list" role="list">
-          <li class="preview-item">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>建構基於知識翻新理論之科學探究教學模式－知識翻新導向之合作論證歷程與學習遷移分析：以生成式 AI 支援為輔</h3>
-              <p>國科會研究計畫（整合型） · 計畫主持人 · 3 年期 · NSTC 115-2410-H-142-036-MY3</p>
-              <p>2026.08.01–2029.07.31</p>
-            </div>
-          </li>
-          <li class="preview-item">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>基於知識翻新理論之 SDGs 議題導向議論文寫作教學與線上合作論證議論文寫作學習平台之設計開發與成效驗證</h3>
-              <p>國科會研究計畫 · 計畫主持人 · 2 年期 · NSTC 113-2410-H-008-078-MY2</p>
-              <p>2024.08.01–2026.07.31</p>
-            </div>
-          </li>
-          <li class="preview-item">
-            <div class="pub-year">2022</div>
-            <div>
-              <h3>探討基於「知識翻新」理論之合作論證學習對於大學生以社會性科學議題進行非形式推理及議論文寫作之影響</h3>
-              <p>國科會研究計畫 · 計畫主持人 · 1 年期 · NSTC 111-2410-H-A49-024</p>
-              <p>2022.08.01–2023.07.31</p>
-            </div>
-          </li>
-          <li class="preview-item">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>中小學生成式 AI 之學習應用手冊開發計畫</h3>
-              <p>教育部委辦計畫 · 協同主持人 · 5 個月</p>
-              <p>2026.08.01–2026.12.31</p>
-            </div>
-          </li>
-          <li class="preview-item">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>中小學生成式 AI 之學習應用手冊開發計畫</h3>
-              <p>教育部委辦計畫 · 計畫主持人 · 6 個月</p>
-              <p>2026.02.01–2026.07.31</p>
-            </div>
-          </li>
-          <li class="preview-item">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>「議」如反掌 II：整合 AI 寫作精靈與合作知識翻新平台提升英文論證寫作教學</h3>
-              <p>教育部教學實踐研究計畫 · 計畫主持人 · 1 年期</p>
-              <p>2025.08.01–2026.07.31</p>
-            </div>
-          </li>
-          <li class="preview-item">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>國高中自然科學領域地球科學適性教學教材研發實驗計畫</h3>
-              <p>教育部委辦計畫 · 計畫主持人 · 1 年期</p>
-              <p>2025.01.01–2025.12.31</p>
-            </div>
-          </li>
-          <li class="preview-item">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>國中小自然科學領域適性教學教材研發實驗計畫</h3>
-              <p>教育部委辦計畫 · 計畫主持人 · 1 年期</p>
-              <p>2025.01.01–2025.12.31</p>
-            </div>
-          </li>
-          <li class="preview-item">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>國中小自然數位學習精緻化教材開發計畫</h3>
-              <p>教育部委辦計畫 · 計畫主持人 · 1 年期</p>
-              <p>2024.01.01–2024.12.31</p>
-            </div>
-          </li>
-          <li class="preview-item">
-            <div class="pub-year">2023</div>
-            <div>
-              <h3>「議」如反掌：利用合作知識翻新論證平台翻轉英文議論文寫作教學</h3>
-              <p>教育部教學實踐研究計畫 · 計畫主持人 · 1 年期</p>
-              <p>2023.08.01–2024.07.31</p>
-            </div>
-          </li>
-          </ul>
+          <section class="project-group">
+            <h3>國科會計畫</h3>
+            <ul class="pub-preview project-list" role="list">
+              <li class="preview-item">
+                <div class="pub-year">2026</div>
+                <div>
+                  <h4>建構基於知識翻新理論之科學探究教學模式－知識翻新導向之合作論證歷程與學習遷移分析：以生成式 AI 支援為輔</h4>
+                  <p>國科會研究計畫（整合型） · 計畫主持人 · 3 年期 · NSTC 115-2410-H-142-036-MY3</p>
+                  <p>2026.08.01–2029.07.31</p>
+                </div>
+              </li>
+              <li class="preview-item">
+                <div class="pub-year">2024</div>
+                <div>
+                  <h4>基於知識翻新理論之 SDGs 議題導向議論文寫作教學與線上合作論證議論文寫作學習平台之設計開發與成效驗證</h4>
+                  <p>國科會研究計畫 · 計畫主持人 · 2 年期 · NSTC 113-2410-H-008-078-MY2</p>
+                  <p>2024.08.01–2026.07.31</p>
+                </div>
+              </li>
+              <li class="preview-item">
+                <div class="pub-year">2022</div>
+                <div>
+                  <h4>探討基於「知識翻新」理論之合作論證學習對於大學生以社會性科學議題進行非形式推理及議論文寫作之影響</h4>
+                  <p>國科會研究計畫 · 計畫主持人 · 1 年期 · NSTC 111-2410-H-A49-024</p>
+                  <p>2022.08.01–2023.07.31</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="project-group">
+            <h3>教學實踐研究計畫</h3>
+            <ul class="pub-preview project-list" role="list">
+              <li class="preview-item">
+                <div class="pub-year">2025</div>
+                <div>
+                  <h4>「議」如反掌 II：整合 AI 寫作精靈與合作知識翻新平台提升英文論證寫作教學</h4>
+                  <p>教育部教學實踐研究計畫 · 計畫主持人 · 1 年期</p>
+                  <p>2025.08.01–2026.07.31</p>
+                </div>
+              </li>
+              <li class="preview-item">
+                <div class="pub-year">2023</div>
+                <div>
+                  <h4>「議」如反掌：利用合作知識翻新論證平台翻轉英文議論文寫作教學</h4>
+                  <p>教育部教學實踐研究計畫 · 計畫主持人 · 1 年期</p>
+                  <p>2023.08.01–2024.07.31</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="project-group">
+            <h3>產學合作計畫</h3>
+            <ul class="pub-preview project-list" role="list">
+              <li class="preview-item">
+                <div class="pub-year">2026</div>
+                <div>
+                  <h4>中小學生成式 AI 之學習應用手冊開發計畫</h4>
+                  <p>教育部委辦計畫 · 協同主持人 · 5 個月</p>
+                  <p>2026.08.01–2026.12.31</p>
+                </div>
+              </li>
+              <li class="preview-item">
+                <div class="pub-year">2026</div>
+                <div>
+                  <h4>中小學生成式 AI 之學習應用手冊開發計畫</h4>
+                  <p>教育部委辦計畫 · 計畫主持人 · 6 個月</p>
+                  <p>2026.02.01–2026.07.31</p>
+                </div>
+              </li>
+              <li class="preview-item">
+                <div class="pub-year">2025</div>
+                <div>
+                  <h4>國高中自然科學領域地球科學適性教學教材研發實驗計畫</h4>
+                  <p>教育部委辦計畫 · 計畫主持人 · 1 年期</p>
+                  <p>2025.01.01–2025.12.31</p>
+                </div>
+              </li>
+              <li class="preview-item">
+                <div class="pub-year">2025</div>
+                <div>
+                  <h4>國中小自然科學領域適性教學教材研發實驗計畫</h4>
+                  <p>教育部委辦計畫 · 計畫主持人 · 1 年期</p>
+                  <p>2025.01.01–2025.12.31</p>
+                </div>
+              </li>
+              <li class="preview-item">
+                <div class="pub-year">2024</div>
+                <div>
+                  <h4>國中小自然數位學習精緻化教材開發計畫</h4>
+                  <p>教育部委辦計畫 · 計畫主持人 · 1 年期</p>
+                  <p>2024.01.01–2024.12.31</p>
+                </div>
+              </li>
+            </ul>
+          </section>
         </div>
       </div>
     </section>
