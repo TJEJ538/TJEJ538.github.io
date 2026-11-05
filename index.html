@@ -12,6 +12,31 @@
   <title>Li-Jen Wang, Ph.D. | Academic Website</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .caws-notice {
+      display: flex;
+      align-items: center;
+      gap: clamp(12px, 3vw, 22px);
+      margin-top: 24px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--teal-soft);
+    }
+    .caws-notice svg { flex: 0 0 auto; width: clamp(52px, 10vw, 76px); height: auto; }
+    .caws-notice h2 { margin: 0; font-size: 1.45rem; }
+    .caws-notice p { margin: 4px 0 0; color: var(--teal-dark); line-height: 1.4; }
+    .caws-status {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #fff3d6;
+      color: #684505;
+      font-size: 0.82rem;
+      font-weight: 750;
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -42,8 +67,29 @@
           <p class="hero-text">I study how AI, collaborative learning, and digital technologies can support language learning and knowledge construction while preserving learner thinking.</p>
           <div class="hero-actions">
             <a class="button primary" href="publications.html">View publications</a>
-            <a class="button secondary" href="mailto:wanglr38@gmail.com">Email me</a>
+            <a class="button secondary" href="mailto:tommywang@mail.ntcu.edu.tw">Email me</a>
           </div>
+          <aside class="caws-notice" aria-labelledby="caws-title">
+            <svg viewBox="0 0 120 120" width="76" height="76" aria-hidden="true" focusable="false">
+              <ellipse cx="60" cy="72" rx="40" ry="42" fill="#6b4a3a"/>
+              <path d="M24 40 L34 18 L46 36 Z" fill="#6b4a3a"/>
+              <path d="M96 40 L86 18 L74 36 Z" fill="#6b4a3a"/>
+              <ellipse cx="60" cy="86" rx="26" ry="24" fill="#c9a98a"/>
+              <path d="M44 80 q4 4 8 0 M56 88 q4 4 8 0 M68 80 q4 4 8 0 M50 96 q4 4 8 0 M62 96 q4 4 8 0" stroke="#a5836a" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <circle cx="43" cy="54" r="17" fill="#f3e7da"/>
+              <circle cx="77" cy="54" r="17" fill="#f3e7da"/>
+              <circle cx="45" cy="55" r="9" fill="#2b1d16"/>
+              <circle cx="75" cy="55" r="9" fill="#2b1d16"/>
+              <circle cx="48" cy="52" r="3" fill="#fff"/>
+              <circle cx="78" cy="52" r="3" fill="#fff"/>
+              <path d="M55 64 L60 74 L65 64 Z" fill="#e8a33d"/>
+            </svg>
+            <div>
+              <h2 id="caws-title">CAWS</h2>
+              <p>Collaborative AI Writing Studio</p>
+              <span class="caws-status">Under maintenance · <span lang="zh-Hant">維護中</span></span>
+            </div>
+          </aside>
           <div class="quick-facts" aria-label="Research profile highlights">
             <span>Human–AI learning</span>
             <span>Technology-supported writing</span>
