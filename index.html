@@ -44,12 +44,27 @@
     #projects .preview-item h3 { line-height: 1.4; }
     #projects .preview-item p { overflow-wrap: anywhere; }
     @media (min-width: 981px) {
-      .hero-visual {
-        align-self: start;
-        justify-self: center;
-        width: min(86%, max(220px, calc(80svh - 150px)));
-        margin-top: 12px;
+      .hero {
+        min-height: calc(100svh - 76px);
+        padding: clamp(20px, 3.5svh, 32px) 0 24px;
       }
+      .hero-grid { align-items: start; gap: clamp(32px, 5vw, 64px); }
+      .hero-copy { padding-top: 12px; }
+      .hero h1 { font-size: clamp(2.6rem, 4.8vw, 4.3rem); }
+      .hero .role { margin-top: 14px; }
+      .hero-text { margin-top: 16px; }
+      .hero-actions, .quick-facts { margin-top: 20px; }
+      .hero-visual {
+        justify-self: center;
+        width: min(100%, 350px);
+      }
+      .hero-visual .portrait-card {
+        width: min(100%, max(160px, calc(80svh - 255px)));
+        margin-inline: auto;
+      }
+      .hero-visual .caws-notice { gap: 12px; margin-top: 12px; padding: 12px; }
+      .hero-visual .caws-notice svg { width: 48px; }
+      .hero-visual .caws-notice p { font-size: 0.9rem; }
     }
     @media (max-width: 680px) {
       #projects .preview-item { grid-template-columns: minmax(0, 1fr); }
