@@ -86,7 +86,7 @@
       #projects .preview-item { grid-template-columns: minmax(0, 1fr); }
     }
     /* portrait carousel */
-    .portrait-carousel img { transition: opacity 1.2s ease; }
+    .portrait-carousel img { transition: opacity .8s ease; }
     .portrait-carousel img:not(:first-of-type) { position: absolute; inset: 0; height: 100%; }
     .portrait-carousel img:not(.is-active) { opacity: 0; }
     .portrait-carousel figcaption { z-index: 2; }
@@ -407,8 +407,7 @@
       var slides = card.querySelectorAll('img');
       var caption = card.querySelector('figcaption');
       var dotsBox = card.querySelector('.carousel-dots');
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var index = 0, timer = null, DELAY = 4500;
+      var index = 0, timer = null, DELAY = 3000;
       var dots = Array.prototype.map.call(slides, function (img, i) {
         var b = document.createElement('button');
         b.type = 'button';
@@ -425,10 +424,8 @@
       }
       function restart() {
         clearInterval(timer);
-        if (!reduce) timer = setInterval(function () { show(index + 1); }, DELAY);
+        timer = setInterval(function () { show(index + 1); }, DELAY);
       }
-      card.addEventListener('mouseenter', function () { clearInterval(timer); });
-      card.addEventListener('mouseleave', restart);
       show(0);
       restart();
     })();
