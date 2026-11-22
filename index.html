@@ -85,6 +85,15 @@
     @media (max-width: 680px) {
       #projects .preview-item { grid-template-columns: minmax(0, 1fr); }
     }
+    /* portrait carousel */
+    .portrait-carousel img { transition: opacity 1.2s ease; }
+    .portrait-carousel img:not(:first-of-type) { position: absolute; inset: 0; height: 100%; }
+    .portrait-carousel img:not(.is-active) { opacity: 0; }
+    .portrait-carousel figcaption { z-index: 2; }
+    .carousel-dots { position: absolute; right: 18px; bottom: 24px; z-index: 2; display: flex; gap: 6px; }
+    .carousel-dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 999px; background: rgba(255,255,255,.6); cursor: pointer; transition: width .3s ease, background .3s ease; }
+    .carousel-dots button[aria-current="true"] { width: 20px; background: #fff; }
+    @media (prefers-reduced-motion: reduce) { .portrait-carousel img, .carousel-dots button { transition: none; } }
   </style>
 </head>
 <body id="home">
@@ -126,9 +135,14 @@
           </div>
         </div>
         <div class="hero-visual">
-          <figure class="portrait-card">
-            <img src="assets/profile.png" alt="Stylized portrait of Li-Jen Wang at an international academic conference">
-            <figcaption>ACE 2026 Tokyo, Japan</figcaption>
+          <figure class="portrait-card portrait-carousel" aria-roledescription="carousel" aria-label="Illustrated portraits of Li-Jen Wang at academic events">
+            <img class="is-active" src="assets/portraits/portrait-1-aceid2025-iafor.webp" alt="Illustrated portrait of Li-Jen Wang in front of the IAFOR backdrop at ACEID 2025" data-caption="ACEID 2025 Tokyo, Japan">
+            <img src="assets/portraits/portrait-2-aceid2025-oral.webp" alt="Illustrated portrait of Li-Jen Wang beside presentation slides at ACEID 2025" data-caption="ACEID 2025 · Oral Presentation" loading="lazy">
+            <img src="assets/portraits/portrait-3-aceid2026-poster.webp" alt="Illustrated portrait of Li-Jen Wang beside a research poster at ACEID 2026" data-caption="ACEID 2026 · Poster Session" loading="lazy">
+            <img src="assets/portraits/portrait-4-nycu2024-judge.webp" alt="Illustrated portrait of Li-Jen Wang speaking with a microphone as a competition judge" data-caption="NYCU 2024 · Invited Judge" loading="lazy">
+            <img src="assets/portraits/portrait-5-ace2026-tokyo.webp" alt="Illustrated portrait of Li-Jen Wang in a dark suit at ACE 2026 in Tokyo" data-caption="ACE 2026 Tokyo, Japan" loading="lazy">
+            <figcaption aria-live="polite">ACEID 2025 Tokyo, Japan</figcaption>
+            <div class="carousel-dots"></div>
           </figure>
           <a class="caws-notice" href="https://caws.lijenwang.com" aria-labelledby="caws-title">
             <svg viewBox="0 0 120 120" width="76" height="76" aria-hidden="true" focusable="false">
@@ -386,5 +400,38 @@
       <a href="#home">Back to top ↑</a>
     </div>
   </footer>
+  <script>
+    (function () {
+      var card = document.querySelector('.portrait-carousel');
+      if (!card) return;
+      var slides = card.querySelectorAll('img');
+      var caption = card.querySelector('figcaption');
+      var dotsBox = card.querySelector('.carousel-dots');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var index = 0, timer = null, DELAY = 4500;
+      var dots = Array.prototype.map.call(slides, function (img, i) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Show portrait ' + (i + 1) + ': ' + img.dataset.caption);
+        b.addEventListener('click', function () { show(i); restart(); });
+        dotsBox.appendChild(b);
+        return b;
+      });
+      function show(i) {
+        index = (i + slides.length) % slides.length;
+        slides.forEach(function (s, n) { s.classList.toggle('is-active', n === index); });
+        dots.forEach(function (d, n) { d.setAttribute('aria-current', n === index ? 'true' : 'false'); });
+        caption.textContent = slides[index].dataset.caption;
+      }
+      function restart() {
+        clearInterval(timer);
+        if (!reduce) timer = setInterval(function () { show(index + 1); }, DELAY);
+      }
+      card.addEventListener('mouseenter', function () { clearInterval(timer); });
+      card.addEventListener('mouseleave', restart);
+      show(0);
+      restart();
+    })();
+  </script>
 </body>
 </html>
