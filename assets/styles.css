@@ -61,8 +61,6 @@ h1 { font-size: clamp(3.6rem, 8vw, 7rem); margin: 0; max-width: 900px; }
 .button.primary:hover { background: var(--teal-dark); }
 .button.secondary { color: var(--teal-dark); background: transparent; }
 .button.secondary:hover { background: var(--teal-soft); }
-.quick-facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
-.quick-facts span { border: 1px solid var(--line); background: rgba(255,255,255,.55); padding: 8px 12px; border-radius: 999px; font-size: 0.82rem; color: var(--muted); }
 
 .portrait-card { position: relative; margin: 0; border-radius: 34px; overflow: hidden; background: var(--sand); box-shadow: var(--shadow); transform: rotate(1.2deg); }
 .portrait-card::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(255,255,255,.4); pointer-events: none; border-radius: inherit; }
@@ -93,6 +91,8 @@ h1 { font-size: clamp(3.6rem, 8vw, 7rem); margin: 0; max-width: 900px; }
 .card-number { display: inline-flex; width: 42px; height: 42px; border-radius: 13px; align-items: center; justify-content: center; background: var(--teal-soft); color: var(--teal-dark); font-weight: 800; font-size: 1.125rem; }
 .card h3 { font-size: 1.45rem; margin: 58px 0 12px; }
 .card p { color: var(--muted); margin: 0; }
+.research-link { display: inline-block; margin-top: 14px; color: var(--teal-dark); font-weight: 700; }
+#ai-literacy-ace-2026 { scroll-margin-top: 96px; }
 
 .pub-preview { border-top: 1px solid var(--line); }
 .preview-item { display: grid; grid-template-columns: 86px 1fr; gap: 26px; padding: 24px 0; border-bottom: 1px solid var(--line); }
