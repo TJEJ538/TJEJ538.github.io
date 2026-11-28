@@ -92,6 +92,14 @@ h1 { font-size: clamp(3.6rem, 8vw, 7rem); margin: 0; max-width: 900px; }
 .card h3 { font-size: 1.45rem; margin: 58px 0 12px; }
 .card p { color: var(--muted); margin: 0; }
 .research-link { display: inline-block; margin-top: 14px; color: var(--teal-dark); font-weight: 700; }
+#caws { scroll-margin-top: 96px; }
+.caws-overview { align-items: start; }
+.caws-overview h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+.caws-overview ol { padding-inline-start: 1.35em; }
+.caws-overview li + li { margin-top: 8px; }
+.caws-overview figure { min-width: 0; margin: 0; }
+.caws-overview img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 16px; }
+.caws-overview figcaption { margin-top: 8px; color: var(--muted); font-size: .9rem; }
 #aera-2027, #ai-literacy-ace-2026 { scroll-margin-top: 96px; }
 
 .pub-preview { border-top: 1px solid var(--line); }
