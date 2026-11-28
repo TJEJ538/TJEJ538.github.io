@@ -90,7 +90,7 @@ h1 { font-size: clamp(3.6rem, 8vw, 7rem); margin: 0; max-width: 900px; }
 .card-grid { display: grid; gap: 18px; }
 .research-grid { grid-template-columns: repeat(4, 1fr); }
 .card { min-height: 260px; padding: 28px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
-.card-number { display: inline-flex; width: 42px; height: 42px; border-radius: 13px; align-items: center; justify-content: center; background: var(--teal-soft); color: var(--teal-dark); font-weight: 800; font-size: .82rem; }
+.card-number { display: inline-flex; width: 42px; height: 42px; border-radius: 13px; align-items: center; justify-content: center; background: var(--teal-soft); color: var(--teal-dark); font-weight: 800; font-size: 1.125rem; }
 .card h3 { font-size: 1.45rem; margin: 58px 0 12px; }
 .card p { color: var(--muted); margin: 0; }
 
