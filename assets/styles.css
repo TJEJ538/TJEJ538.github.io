@@ -92,13 +92,16 @@ h1 { font-size: clamp(3.6rem, 8vw, 7rem); margin: 0; max-width: 900px; }
 .card h3 { font-size: 1.45rem; margin: 58px 0 12px; }
 .card p { color: var(--muted); margin: 0; }
 .research-link { display: inline-block; margin-top: 14px; color: var(--teal-dark); font-weight: 700; }
-#ai-literacy-ace-2026 { scroll-margin-top: 96px; }
+#aera-2027, #ai-literacy-ace-2026 { scroll-margin-top: 96px; }
 
 .pub-preview { border-top: 1px solid var(--line); }
 .preview-item { display: grid; grid-template-columns: 86px 1fr; gap: 26px; padding: 24px 0; border-bottom: 1px solid var(--line); }
 .preview-item .pub-year { color: var(--teal); font-weight: 840; font-size: 1.05rem; }
 .preview-item h3 { margin: 0 0 6px; font-size: clamp(1.15rem, 2.2vw, 1.55rem); }
 .preview-item p { margin: 0; color: var(--muted); }
+.publication-news { margin-top: 24px; padding: 18px 22px; border-left: 3px solid var(--teal); background: var(--teal-soft); }
+.publication-news p { margin: 0 0 6px; }
+.publication-news a { color: var(--teal-dark); font-weight: 700; }
 
 .publication-group { margin-top: 54px; }
 .group-heading { display:flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
